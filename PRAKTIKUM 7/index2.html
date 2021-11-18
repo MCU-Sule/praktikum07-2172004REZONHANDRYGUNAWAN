@@ -1,0 +1,66 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let harga= window.prompt("Berapa total belanjaan anda");
+            let uang= window.prompt("Berapa total uang yang dibayar");
+
+            let Total = uang-harga;
+
+            document.write("harga belanjaan anda adalah Rp "+harga+" <br>");
+            document.write("Uang yang dibayarkan adalah Rp "+uang+" <br><br>");
+            document.write("kembalian ada adalah Rp"+Total+" dengan rincian sebagai berikut");
+            
+            let seratus=-1;
+            let temp=Total;
+            while (temp>=0) {
+            temp=temp-100000;
+            seratus=seratus+1;
+            }
+            temp=Total-(seratus*100000);
+            Total=temp;
+
+document.write("<br>Uang pecahan 100k adalah "+seratus+" Lembar");
+
+            let Limapuluh=0;
+            while (temp>=0) {
+            temp=temp-50000;
+            Limapuluh=Limapuluh+1;
+            }
+            temp=Total-(Limapuluh*50000);
+            Total=temp;
+
+document.write("<br>Uang pecahan 50k adalah "+Limapuluh+" Lembar");
+
+            let Duapuluh=0;
+            while (temp>=0) {
+            temp=temp-20000;
+            Duapuluh=Duapuluh+1;
+            }
+            temp=Total-(Duapuluh*20000);
+            Total=temp;
+
+document.write("<br>Uang pecahan 20k adalah "+Duapuluh+" Lembar");
+
+            let Duaribu=0;
+            while (temp>=0) {
+            temp=temp-2000;
+            Duaribu=Duaribu+1;
+            }
+            temp=Total-(Duaribu*2000);
+            Total=temp;
+
+document.write("<br>Uang pecahan 2k adalah "+Duaribu+" Lembar");
+
+            let seribu=0;
+            while (temp>=0) {
+            temp=temp-1000;
+            seribu=seribu+1;
+            }
+            temp=Total-(seribu*1000);
+            Total=temp;
+
+document.write("<br>Uang pecahan 1k adalah "+seribu+" Lembar");
+        </script>
+    </body>
+</html>

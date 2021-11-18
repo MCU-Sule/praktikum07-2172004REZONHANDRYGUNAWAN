@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let mawar = window.prompt("berapa mawar yang ingin dibeli (Rp 5000)");
+            let tulip = window.prompt("Berapa Tulip yang ingin dibeli (Rp 8000)");
+            let anggrek = window.prompt("Berapa anggrek yang ingin dibeli (Rp 10000)");
+            let Uangkamu = window.prompt("Uang yang dibayarkan");
+
+            let a = 5000
+            let b = 8000
+            let c = 10000
+            let n = Uangkamu
+
+            let hargaMawar = mawar*a;
+            let hargaTulip = tulip*b;
+            let hargaAnggrek = anggrek*c;
+            let Total = a+b+c;
+
+            
+            let Kembalian = Uangkamu-Total;
+
+            document.write("anda membeli mawar sebanyak"+mawar+" dengan harga total "+hargaMawar+"<br>");
+            document.write("anda membeli tulip sebanyak"+tulip+" dengan harga total "+hargaTulip+" <br>");
+            document.write("anda membeli anggrek sebanyak"+anggrek+" dengan harga total"+hargaAnggrek+"<br>");
+           
+            if (Uangkamu>=Total){
+                document.write("Total belanjaan anda"+Total+" <br>");
+                document.write("Kembalian anda adalah"+Kembalian+" <br>");
+                document.write("TERIMA KASIH!!!")
+            }
+            else {
+                document.write("Total belanjaan anda"+Total+" <br>");
+                document.write("UANG ANDA TIDAK CUKUP !!!")
+            }
+        </script>
+    </body>
+</html>
